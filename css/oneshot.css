@@ -54,6 +54,7 @@ body {
 
 #desktop .icon span {
     height: 23px;
+    padding: 0 2px;
     display: inline-block;
     font-size: 16px;
     background: #000000;
@@ -62,10 +63,57 @@ body {
 
 #taskbar {
     width: 100%;
-    height: 48px;
+    height: 60px;
     padding: 4px;
     bottom: 0;
     position: fixed;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     border-top: #9664ff 4px solid;
     background: #000000;
+    color: #9664ff;
+}
+
+#taskbar .button {
+    width: 182px;
+    height: 48px;
+    margin: 0 4px 0 0;
+    padding: 8px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    background: #9664ff;
+    color: #000000;
+    user-select: none;
+}
+
+#taskbar .button:hover {
+    background: #aa82ff;
+}
+
+#taskbar .button img {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    pointer-events: none;
+}
+
+#taskbar #tb-leftpane {
+    margin-right: 8px;
+}
+
+#taskbar #tb-leftpane span {
+    line-height: 58px;
+    text-align: center;
+}
+
+#taskbar #tb-leftpane #tb-hide {
+    height: 32px;
+    width: 32px;
+    margin-left: 4px;
+    display: inline-block;
+    background-image: url("../img/icons/icon_hide_taskbar.png");
 }
